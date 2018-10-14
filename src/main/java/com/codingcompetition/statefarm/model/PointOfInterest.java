@@ -5,36 +5,20 @@ import java.util.List;
 import java.util.Map;
 
 import com.codingcompetition.statefarm.Category;
+import com.codingcompetition.statefarm.SearchCriteria;
 
 public class PointOfInterest {
-	private class Tag {
-		private Category key;
-		private String value;
-		
-		public Tag(Category key, String value) {
-			this.key = key;
-			this.value = value;
-		}
-		
-		public Category getKey() {
-			return this.key;
-		}
-		
-		public String getValue() {
-			return this.value;
-		}
-	}
 	
-	private int id, version, changeset, uid;
-	private double lat, lon;
+	private String id, version, changeset, uid;
+	private final String lat, lon;
 	private String timestamp, user;
-	private List<Tag> tags;
+	private List<SearchCriteria> tags;
 	
-	public PointOfInterest(int id, int version, int changeset, int uid, double lat, double lon, String timestamp, String user, List<Tag> tags) {
+	public PointOfInterest(String id, String version, String changeset, String uid, String lat, String lon, String timestamp, String user, List<SearchCriteria> tags) {
 		this.id = id;
 		this.version = version;
 		this.changeset = changeset;
-		this.uid = changeset;
+		this.uid = uid;
 		this.lat = lat;
 		this.lon = lon;
 		this.timestamp = timestamp;
@@ -47,10 +31,35 @@ public class PointOfInterest {
     }
 
     public String getLatitude() {
-        return "";
+        return lat;
     }
 
     public String getLongitude() {
-        return "";
+        return lon;
     }
+    
+    public String getId() {
+        return id;
+    }
+    
+    public String getVersion() {
+    		return version;
+    }
+    
+    public String getChangeset() {
+    		return changeset;
+    }
+    
+    public String getUid() {
+		return uid;
+    }
+    
+    public String getTimestamp() {
+		return timestamp;
+    }
+    
+    public String getUser() {
+		return user;
+    }
+    
 }

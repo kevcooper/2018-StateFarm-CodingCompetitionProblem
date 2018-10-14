@@ -15,6 +15,9 @@ public class StreetMapDataInterpreter implements Interpreter {
 
 
     public StreetMapDataInterpreter(String s) {
+    		
+    	System.out.println(s);
+    	
     }
 
     @Override
