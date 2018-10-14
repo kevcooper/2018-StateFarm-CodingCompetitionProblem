@@ -13,9 +13,9 @@ public class PointOfInterest {
 	private final String lat, lon;
 	private String timestamp, user;
 	private SearchCriteria searchCrit;
-	private HashMap<Object, String> map = new HashMap<Object, String>();
+	private HashMap<Object, String> desc;
 	
-	public PointOfInterest(String id, String version, String changeset, String uid, String lat, String lon, String timestamp, String user, SearchCriteria searchCrit) {
+	public PointOfInterest(String id, String version, String changeset, String uid, String lat, String lon, String timestamp, String user) {
 		this.id = id;
 		this.version = version;
 		this.changeset = changeset;
@@ -24,11 +24,11 @@ public class PointOfInterest {
 		this.lon = lon;
 		this.timestamp = timestamp;
 		this.user = user;
-		this.map.put(searchCrit.getCat(), searchCrit.getValue());
+		this.desc = new HashMap<>();
 	}
 
     public Map<Object,String> getDescriptors() {
-    		return map;
+    		return desc;
     }
 
     public String getLatitude() {
