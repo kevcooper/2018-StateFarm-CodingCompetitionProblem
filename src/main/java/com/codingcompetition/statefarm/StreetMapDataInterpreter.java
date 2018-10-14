@@ -15,11 +15,14 @@ public class StreetMapDataInterpreter implements Interpreter {
 
 	List<PointOfInterest> list;
 
-    public StreetMapDataInterpreter(String fn) throws IOException, SAXException {
+    public StreetMapDataInterpreter(String fn) {
     		
     		PointOfInterestParser point = new PointOfInterestParser();
-    		
-    		list = point.parse(fn);
+    		try {
+    			list = point.parse(fn);
+    		}catch (Exception e){
+    			e.printStackTrace();
+    		}
     	
     }
     
