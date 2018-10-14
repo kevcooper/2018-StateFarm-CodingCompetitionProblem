@@ -10,7 +10,7 @@ import com.codingcompetition.statefarm.SearchCriteria;
 public class PointOfInterest {
 	
 	private String id, version, changeset, uid;
-	private final String lat, lon;
+	private String lat, lon;
 	private String timestamp, user;
 	private HashMap<Object, String> desc;
 	
@@ -23,6 +23,18 @@ public class PointOfInterest {
 		this.lon = lon;
 		this.timestamp = timestamp;
 		this.user = user;
+		this.desc = new HashMap<>();
+	}
+	
+	public PointOfInterest() {
+		this.id = null;
+		this.version = null;
+		this.changeset = null;
+		this.uid = null;
+		this.lat = null;
+		this.lon = null;
+		this.timestamp = null;
+		this.user = null;
 		this.desc = new HashMap<>();
 	}
 
@@ -65,5 +77,40 @@ public class PointOfInterest {
     public String getUser() {
 		return user;
     }
+    
+    
+    public void setLatitude(String lat) {
+        this.lat = lat;
+    }
+
+    public void setLongitude(String lon) {
+        this.lon = lon;
+    }
+    
+    public void setId(String id) {
+        this.id = id;
+    }
+    
+    public void setVersion(String version) {
+    		this.version = version;
+    }
+    
+    public void setChangeset(String changeset) {
+    		this.changeset = changeset;
+    }
+    
+    public void setUid(String uid) {
+		this.uid = uid;
+    }
+    
+    public void setTimestamp(String timestamp) {
+		this.timestamp = timestamp;
+    }
+    
+    public void setUser(String user) {
+		this.user = user;
+    }
+    
+    
     
 }
