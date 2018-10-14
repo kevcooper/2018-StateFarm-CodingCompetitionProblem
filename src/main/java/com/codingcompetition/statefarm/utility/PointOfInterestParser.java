@@ -8,6 +8,8 @@ import org.xml.sax.helpers.DefaultHandler;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
+
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -23,7 +25,11 @@ public class PointOfInterestParser {
 
 
     public List<PointOfInterest> parse(String fileName) throws IOException, SAXException {
-   return null;
+//    	SAXParserFactory factory = SAXParserFactory.newInstance();
+//        SAXParser parser = factory.newSAXParser();
+//        File file = new File(fileName);
+//        parser.parse(file, new ElementHandler());
+    	return null;
     }
 
 }
