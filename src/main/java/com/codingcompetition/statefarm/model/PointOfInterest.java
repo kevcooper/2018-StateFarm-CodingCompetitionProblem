@@ -12,9 +12,10 @@ public class PointOfInterest {
 	private String id, version, changeset, uid;
 	private final String lat, lon;
 	private String timestamp, user;
-	private List<SearchCriteria> tags;
+	private SearchCriteria searchCrit;
+	private HashMap<Object, String> map = new HashMap<Object, String>();
 	
-	public PointOfInterest(String id, String version, String changeset, String uid, String lat, String lon, String timestamp, String user, List<SearchCriteria> tags) {
+	public PointOfInterest(String id, String version, String changeset, String uid, String lat, String lon, String timestamp, String user, SearchCriteria searchCrit) {
 		this.id = id;
 		this.version = version;
 		this.changeset = changeset;
@@ -23,11 +24,11 @@ public class PointOfInterest {
 		this.lon = lon;
 		this.timestamp = timestamp;
 		this.user = user;
-		this.tags = tags;
+		this.map.put(searchCrit.getCat(), searchCrit.getValue());
 	}
 
     public Map<Object,String> getDescriptors() {
-    return new HashMap<>();
+    		return map;
     }
 
     public String getLatitude() {
