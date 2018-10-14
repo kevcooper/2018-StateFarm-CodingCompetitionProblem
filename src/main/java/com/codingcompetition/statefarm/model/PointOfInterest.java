@@ -12,7 +12,6 @@ public class PointOfInterest {
 	private String id, version, changeset, uid;
 	private final String lat, lon;
 	private String timestamp, user;
-	private SearchCriteria searchCrit;
 	private HashMap<Object, String> desc;
 	
 	public PointOfInterest(String id, String version, String changeset, String uid, String lat, String lon, String timestamp, String user) {
@@ -30,6 +29,10 @@ public class PointOfInterest {
     public Map<Object,String> getDescriptors() {
     		return desc;
     }
+    
+    public void setDescriptors(String key, String val) {
+		this.desc.put(key, val);
+	}
 
     public String getLatitude() {
         return lat;
