@@ -23,9 +23,7 @@ public class StreetMapDataInterpreter implements Interpreter {
     		}catch (Exception e){
     			e.printStackTrace();
     		}
-    	
     }
-    
 
     @Override
     public List<PointOfInterest> interpret() {
@@ -34,6 +32,15 @@ public class StreetMapDataInterpreter implements Interpreter {
 
     @Override
     public List<PointOfInterest> interpret(SearchCriteria criteria) {
+    	
+    		List<PointOfInterest> list = new ArrayList<PointOfInterest>();
+    		
+    		if (criteria == null) {
+    			return list;
+    		}
+    		
+    		
+    		
         return null;
     }
 
@@ -44,6 +51,27 @@ public class StreetMapDataInterpreter implements Interpreter {
 
     @Override
     public List<PointOfInterest> findByCriterias(List<SearchCriteria> criterias) {
+    	
+    		List<PointOfInterest> find = new ArrayList<PointOfInterest>();
+    		
+    		if(criterias == null) {
+    			return find;
+    		}
+    		for (PointOfInterest l : list ) {
+	    		for(SearchCriteria criteria : criterias) {
+	    			
+	    			Map<Object, String> descript = l.getDescriptors();
+	    			
+	    			Category category = criteria.getCat();
+	    			String val = criteria.getValue(); 
+	    			
+	    			if (category == Category.NAMESTARTSWITH) {
+	    				
+	    			}
+	    			
+	    		}
+    		}
+    		
         return null;
     }
 }
