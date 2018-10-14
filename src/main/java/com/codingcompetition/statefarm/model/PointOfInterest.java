@@ -29,6 +29,18 @@ public class PointOfInterest {
 	private double lat, lon;
 	private String timestamp, user;
 	private List<Tag> tags;
+	
+	public PointOfInterest(int id, int version, int changeset, int uid, double lat, double lon, String timestamp, String user, List<Tag> tags) {
+		this.id = id;
+		this.version = version;
+		this.changeset = changeset;
+		this.uid = changeset;
+		this.lat = lat;
+		this.lon = lon;
+		this.timestamp = timestamp;
+		this.user = user;
+		this.tags = tags;
+	}
 
     public Map<Object,String> getDescriptors() {
     return new HashMap<>();
