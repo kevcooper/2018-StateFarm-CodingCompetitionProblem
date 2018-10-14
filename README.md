@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/kevcooper/2018-StateFarm-CodingCompetitionProblem.svg?style=svg)](https://circleci.com/gh/kevcooper/2018-StateFarm-CodingCompetitionProblem)
+
 # Welcome
 Welcome to the 2018 State Farm Coding Competition!
 
