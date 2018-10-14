@@ -13,16 +13,23 @@ import java.util.stream.Collectors;
 
 public class StreetMapDataInterpreter implements Interpreter {
 
+	List<PointOfInterest> list;
 
-    public StreetMapDataInterpreter(String s) {
+    public StreetMapDataInterpreter(String fn) {
     		
-    	System.out.println(s);
+    		PointOfInterestParser point = new PointOfInterestParser();
+    		try {
+    			list = point.parse(fn);
+    		}catch (Exception e){
+    			e.printStackTrace();
+    		}
     	
     }
+    
 
     @Override
     public List<PointOfInterest> interpret() {
-        return null;
+        return list;
     }
 
     @Override
