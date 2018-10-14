@@ -13,16 +13,20 @@ import java.util.stream.Collectors;
 
 public class StreetMapDataInterpreter implements Interpreter {
 
+	List<PointOfInterest> list;
 
-    public StreetMapDataInterpreter(String s) {
+    public StreetMapDataInterpreter(String fn) throws IOException, SAXException {
     		
-    	System.out.println(s);
+    		PointOfInterestParser point = new PointOfInterestParser();
+    		
+    		list = point.parse(fn);
     	
     }
+    
 
     @Override
     public List<PointOfInterest> interpret() {
-        return null;
+        return list;
     }
 
     @Override

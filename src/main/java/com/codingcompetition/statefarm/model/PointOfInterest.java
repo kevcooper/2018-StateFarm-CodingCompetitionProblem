@@ -110,7 +110,4 @@ public class PointOfInterest {
     public void setUser(String user) {
 		this.user = user;
     }
-    
-    
-    
 }
